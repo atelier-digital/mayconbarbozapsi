@@ -51,7 +51,8 @@ footer{text-align:center;color:var(--muted);margin-top:32px;font-size:13px}
 <p class="subtitle">Psicólogo, Psicanalista e Educador Clínico — Atendimento desde 2016.</p>
 </div>
 
-<img class="profile-photo" src="images/maycon-1.jpg" alt="Foto de Maycon Barboza">
+<!-- usa o arquivo NA RAIZ do repositório -->
+<img class="profile-photo" src="maycon-1.jpg" alt="Foto de Maycon Barboza">
 </div>
 
 <!-- QUEM É -->
@@ -73,7 +74,8 @@ Trabalhos com vínculos, humor, sexualidade e supervisão clínica.
 </p>
 </div>
 
-<img src="images/maycon-2.jpg" style="width:320px;height:240px;object-fit:cover;border-radius:10px">
+<!-- foto lateral também na RAIZ -->
+<img src="maycon-2.jpg" style="width:320px;height:240px;object-fit:cover;border-radius:10px" alt="Maycon em atendimento">
 </div>
 
 <!-- FORMAÇÃO -->
@@ -89,8 +91,8 @@ Metodologia interativa, turmas reduzidas e acompanhamento contínuo.
 <div class="section">
 <h3>E-book da Formação</h3>
 <div class="ebook">
-<object id="ebookObject" data="pdf/ebook.pdf" type="application/pdf">
-<p class="muted">Não foi possível abrir o PDF. <a href="pdf/ebook.pdf">Clique aqui para baixar</a>.</p>
+<object id="ebookObject" data="ebook.pdf" type="application/pdf">
+<p class="muted">Não foi possível abrir o PDF. <a href="ebook.pdf">Clique aqui para baixar</a>.</p>
 </object>
 </div>
 </div>
@@ -99,9 +101,9 @@ Metodologia interativa, turmas reduzidas e acompanhamento contínuo.
 <div class="section">
 <h3>Imagens</h3>
 <div class="gallery">
-<img src="images/maycon-1.jpg">
-<img src="images/maycon-2.jpg">
-<img src="images/maycon-3.jpg">
+<img src="maycon-1.jpg" alt="Maycon 1">
+<img src="maycon-2.jpg" alt="Maycon 2">
+<img src="maycon-3.jpg" alt="Maycon 3">
 </div>
 </div>
 
@@ -112,7 +114,7 @@ Metodologia interativa, turmas reduzidas e acompanhamento contínuo.
 </footer>
 </div>
 
-<!-- YARA (CHAT WATSON) -->
+<!-- Watson (Yara) -->
 <script>
 window.watsonAssistantChatOptions = {
 integrationID: "6f4c306d-a746-496f-b2c1-0ecf69b69af3",
@@ -120,7 +122,7 @@ region: "us-south",
 serviceInstanceID: "99b8a9c7-7e40-4178-965d-4b0ded28035a",
 onLoad: async (instance) => {
 await instance.render();
-setTimeout(()=>{ instance.openWindow(); }, 2000);
+setTimeout(()=>{ try{ instance.openWindow(); } catch(e){ } }, 2000);
 }
 };
 setTimeout(function(){
