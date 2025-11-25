@@ -6,40 +6,54 @@
 <title>Maycon Barboza — Psicólogo, Psicanalista & Educador</title>
 <meta name="description" content="Maycon Barboza — atendimento clínico desde 2016. Formação em psicanálise clínica.">
 <style>
-/* -------------------------
-Estética ajustada (azul,
-tipografia maior, fotos não cortam)
-------------------------- */
 :root{
---bg:#f6f2ec; /* creme suave */
+--bg:#f6f2ec;
 --card:#ffffff;
---primary:#1F5B7A; /* azul clínico elegante (ajustável) */
---muted:#4b4b48; /* texto */
---accent:#2A7EA8; /* destaque leve */
+--primary:#1F5B7A; /* azul clínico elegante */
+--muted:#3f3b38;
+--accent:#2A7EA8;
+--pill-bg: linear-gradient(135deg, rgba(42,126,168,0.10), rgba(42,126,168,0.04));
 --radius:12px;
 --maxw:1120px;
 --serif: "Georgia", "Times New Roman", serif;
 }
 *{box-sizing:border-box}
-html{font-size:19px} /* base maior conforme solicitado */
-body{margin:0;background:var(--bg);color:var(--muted);font-family:var(--serif);-webkit-font-smoothing:antialiased;line-height:1.62}
+html{font-size:19px}
+body{margin:0;background:var(--bg);color:var(--muted);font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--maxw);margin:20px auto;padding:20px}
 .card{background:var(--card);border-radius:calc(var(--radius));padding:26px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
-/* HERO layout */
+/* HERO */
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
 .hero h1{margin:0;font-size:2.1rem;color:var(--primary);letter-spacing:0.2px}
 .lead{margin-top:10px;color:var(--muted);font-size:1.02rem}
 .meta{margin-top:12px;color:var(--muted);font-size:0.98rem}
-.badges{margin-top:14px}
-.badge{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(42,126,168,0.08);color:var(--primary);font-weight:700;margin-right:8px;border:1px solid rgba(42,126,168,0.12);font-size:0.95rem}
-/* HERO image (keeps head visible) */
+/* BADGES: centered, pill style */
+.badges {
+margin-top: 18px;
+display: flex;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+}
+.badge {
+padding: 10px 16px;
+border-radius: 999px;
+background: rgba(31,91,122,0.10);
+color: var(--primary);
+font-weight: 700;
+border: 1px solid rgba(31,91,122,0.18);
+font-size: 0.95rem;
+letter-spacing: .2px;
+box-shadow: 0 2px 6px rgba(31,91,122,0.08);
+}
+/* HERO image */
 .hero-photo{
 width:100%;
 height:60vh;
 max-height:640px;
 border-radius:12px;
 object-fit:cover;
-object-position:center top; /* keep head visible */
+object-position:center top; /* preserve head */
 box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 /* Sections */
@@ -48,7 +62,7 @@ h2{color:var(--primary);margin:0 0 8px;font-size:1.12rem}
 p.muted{color:var(--muted);line-height:1.6;font-size:1rem}
 .two-col{display:flex;gap:20px;align-items:flex-start}
 .col{flex:1}
-/* side photo: tall, but prefer not to cut faces */
+/* side photo: tall, preserve top so head not cut */
 .side-photo{
 width:320px;
 height:260px;
@@ -57,10 +71,29 @@ object-position:center top;
 border-radius:10px;
 box-shadow:0 8px 18px rgba(0,0,0,0.06);
 }
-/* gallery: use contain for photo 3 to avoid cutting the head */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-.gimg{width:100%;height:160px;border-radius:10px;overflow:hidden;background:#f2f0ee;display:flex;align-items:center;justify-content:center}
-.gimg img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+/* GALLERY larger, no head-cutting */
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:14px;
+}
+.gimg{
+width:100%;
+height:250px; /* OPÇÃO 2: 250px de altura */
+border-radius:12px;
+overflow:hidden;
+background:#f0eeeb;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.gimg img{
+max-width:100%;
+max-height:100%;
+object-fit:contain; /* preserve whole image, no cut */
+display:block;
+}
 .ebook object{width:100%;height:480px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);background:#fff}
 footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
 .small-muted{color:var(--muted);font-size:0.95rem}
@@ -69,7 +102,7 @@ footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
 .modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(920px,94%);background:var(--card);border-radius:10px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;display:none;max-height:80vh;overflow:auto}
 .modal h3{margin-top:0;color:var(--primary)}
 .modal .close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:1.1rem;cursor:pointer;color:var(--muted)}
-/* responsive tweaks */
+/* responsive */
 @media (max-width:980px){
 .hero{grid-template-columns:1fr;gap:18px}
 .hero-photo{height:40vh}
@@ -87,8 +120,10 @@ footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
 <header class="hero" role="banner" aria-label="Apresentação do profissional">
 <div>
 <h1>Maycon Barboza</h1>
-<div class="lead">Psicólogo, Psicanalista e Educador Clínico — clínica integrativa com foco em vínculos, transtornos de humor e sexualidade.</div>
+<div class="lead">Psicólogo, Psicanalista e Educador Clínico — Clínica integrativa com foco em vínculos, transtornos de humor e sexualidade.</div>
 <div class="meta"><strong>CRP 01/21617</strong> · Atendimento presencial e online · +14.000 atendimentos</div>
+
+<!-- BADGES centralizados -->
 <div class="badges" aria-hidden="true">
 <span class="badge">Psicanálise Clínica</span>
 <span class="badge">Hipnoterapia</span>
@@ -96,7 +131,7 @@ footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
 </div>
 </div>
 
-<!-- hero image (fallback tries images/... or root) -->
+<!-- HERO IMAGE (resilient loading via script below) -->
 <img id="heroImg" class="hero-photo" src="" alt="Foto de Maycon Barboza — capa">
 </header>
 
@@ -106,7 +141,7 @@ footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
 <p class="muted"><strong>Brasiliense. Pai. Estudioso.</strong> Maycon combina rigor teórico e sensibilidade clínica. Vive a experiência do transtorno bipolar tipo II, o que dá um compromisso ético ampliado para compreender o sofrimento emocional. Atua desde 2016 com práticas clínicas e formação.</p>
 </section>
 
-<!-- Como trabalha com foto lateral -->
+<!-- Como trabalha -->
 <section class="section two-col" id="pratica">
 <div class="col">
 <h2>Como trabalha</h2>
@@ -193,9 +228,8 @@ document.head.appendChild(t);
 });
 </script>
 
-<!-- Script: image/pdf resilient loading + modal logic + fine-tune for photo 3 -->
+<!-- Script: resilient image/pdf loading + modal logic -->
 <script>
-// candidates: images/ first, then root, then internal paths used here
 const heroCandidates = ['images/maycon-1.jpg','maycon-1.jpg','/mnt/data/FAE074C2-FA83-4DA6-847F-32BB45495631.jpeg'];
 const sideCandidates = ['images/maycon-2.jpg','maycon-2.jpg','/mnt/data/EB8BEE95-2113-4781-8A20-A893C88EFD3B.jpeg'];
 const galleryCandidates = ['images/maycon-3.jpg','maycon-3.jpg','/mnt/data/7D8D8CC6-7514-42AB-A9D0-69FEB373E401.jpeg'];
@@ -213,16 +247,16 @@ tester.src = url;
 next();
 }
 
-// load hero and side images
+// load hero, side and gallery images
 tryLoad(document.getElementById('heroImg'), heroCandidates, {'objectPosition':'center top'});
 tryLoad(document.getElementById('sideImg'), sideCandidates, {'objectPosition':'center top'});
 
-// gallery images: to avoid cutting head on photo 3, use contain for all gallery imgs
+// gallery imgs: use contain to avoid cutting heads
 tryLoad(document.getElementById('g1'), galleryCandidates, {'objectFit':'contain'});
 tryLoad(document.getElementById('g2'), sideCandidates, {'objectFit':'contain'});
 tryLoad(document.getElementById('g3'), heroCandidates, {'objectFit':'contain'});
 
-// PDF fallback
+// PDF fallback: tries pdf/ebook.pdf then ebook.pdf
 (async function checkPdf(){
 const candidates = ['pdf/ebook.pdf','ebook.pdf'];
 for(const p of candidates){
@@ -237,10 +271,10 @@ return;
 }
 }catch(e){}
 }
-console.warn('PDF não encontrado.');
+console.warn('PDF não encontrado nos caminhos tentados.');
 })();
 
-// modal logic
+// Modal logic for privacy
 const modal = document.getElementById('privacyModal');
 const backdrop = document.getElementById('modalBackdrop');
 const open = document.getElementById('privacyOpen');
@@ -262,7 +296,9 @@ modal.setAttribute('aria-hidden','true');
 open.addEventListener('click', showModal);
 close.addEventListener('click', hideModal);
 backdrop.addEventListener('click', hideModal);
-document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ hideModal(); } });
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape'){ hideModal(); }
+});
 </script>
 </body>
 </html>
