@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Maycon Barboza — Psicólogo, Psicanalista & Educador</title>
+<meta name="description" content="Maycon Barboza - atendimento clínico desde 2016. Formação em psicanálise, sexualidade e cursos.">
+<style>
+:root{
+--primary: #2A6F97;
+--muted:#6b6b6b;
+--bg:#fbfafa;
+--card:#ffffff;
+--heading-font: Georgia, serif;
+--body-font: Georgia, serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body-font);background:var(--bg);color:#222;line-height:1.5}
+.wrap{max-width:1100px;margin:32px auto;padding:18px}
+.card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+.hero{display:flex;gap:28px;align-items:center}
+.hero-left{flex:1}
+.profile-photo{width:240px;height:240px;border-radius:12px;object-fit:cover;box-shadow:0 8px 22px rgba(0,0,0,0.08)}
+h1{margin:0;font-size:30px;color:var(--primary);font-family:var(--heading-font)}
+h3{margin:0 0 10px;font-size:21px;color:var(--primary);font-family:var(--heading-font)}
+.subtitle{color:var(--muted)}
+.section{margin-top:26px}
+.muted{color:var(--muted)}
+.two-col{display:flex;gap:22px}
+.col{flex:1}
+.ebook object{width:100%;height:420px;border-radius:8px;border:1px solid rgba(0,0,0,0.05)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+footer{text-align:center;color:var(--muted);margin-top:32px;font-size:13px}
+@media(max-width:900px){
+.hero{flex-direction:column}
+.profile-photo{width:180px;height:180px}
+.gallery{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<div class="card">
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-left">
+<h1>Maycon Barboza</h1>
+<p class="subtitle">Psicólogo, Psicanalista e Educador Clínico — Atendimento desde 2016.</p>
+</div>
+
+<img class="profile-photo" src="images/maycon-1.jpg" alt="Foto de Maycon Barboza">
+</div>
+
+<!-- QUEM É -->
+<div class="section">
+<h3>Quem é Maycon</h3>
+<p class="muted">
+Brasiliense. Pai. Estudioso. Psicanalista com trajetória marcada por rigor teórico e sensibilidade clínica.
+Atua há mais de 14 mil atendimentos, com foco em vínculos, humor, sexualidade e sofrimento emocional.
+</p>
+</div>
+
+<!-- COMO TRABALHA -->
+<div class="section two-col">
+<div class="col">
+<h3>Como trabalha</h3>
+<p class="muted">
+Escuta psicanalítica profunda, ética e centrada na singularidade.
+Trabalhos com vínculos, humor, sexualidade e supervisão clínica.
+</p>
+</div>
+
+<img src="images/maycon-2.jpg" style="width:320px;height:240px;object-fit:cover;border-radius:10px">
+</div>
+
+<!-- FORMAÇÃO -->
+<div class="section">
+<h3>Formação Livre em Psicanálise Clínica</h3>
+<p class="muted">
+Formação de 39 meses, com tripé: Análise Pessoal, Supervisão e Teoria.
+Metodologia interativa, turmas reduzidas e acompanhamento contínuo.
+</p>
+</div>
+
+<!-- EBOOK -->
+<div class="section">
+<h3>E-book da Formação</h3>
+<div class="ebook">
+<object id="ebookObject" data="pdf/ebook.pdf" type="application/pdf">
+<p class="muted">Não foi possível abrir o PDF. <a href="pdf/ebook.pdf">Clique aqui para baixar</a>.</p>
+</object>
+</div>
+</div>
+
+<!-- GALERIA -->
+<div class="section">
+<h3>Imagens</h3>
+<div class="gallery">
+<img src="images/maycon-1.jpg">
+<img src="images/maycon-2.jpg">
+<img src="images/maycon-3.jpg">
+</div>
+</div>
+
+</div>
+
+<footer>
+© 2025 · Conteúdo curado por Maycon Barboza
+</footer>
+</div>
+
+<!-- YARA (CHAT WATSON) -->
+<script>
+window.watsonAssistantChatOptions = {
+integrationID: "6f4c306d-a746-496f-b2c1-0ecf69b69af3",
+region: "us-south",
+serviceInstanceID: "99b8a9c7-7e40-4178-965d-4b0ded28035a",
+onLoad: async (instance) => {
+await instance.render();
+setTimeout(()=>{ instance.openWindow(); }, 2000);
+}
+};
+setTimeout(function(){
+const t=document.createElement('script');
+t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/"
++ (window.watsonAssistantChatOptions.clientVersion || 'latest')
++ "/WatsonAssistantChatEntry.js";
+document.head.appendChild(t);
+});
+</script>
+
+</body>
+</html>
