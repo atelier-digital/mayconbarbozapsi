@@ -57,6 +57,30 @@ width:320px;height:260px;object-fit:cover;object-position:center top;
 border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.06);
 }
 
+/* MODALIDADES (botões/accordions) ----------------------- */
+.services{
+display:grid;
+gap:12px;
+margin-top:10px;
+}
+details.service{
+background:#fdf9f3;
+border-radius:12px;
+padding:10px 14px;
+box-shadow:0 4px 10px rgba(0,0,0,0.04);
+}
+details.service summary{
+list-style:none;
+cursor:pointer;
+font-weight:700;
+color:var(--primary);
+}
+details.service summary::-webkit-details-marker{display:none;}
+details.service p{
+margin:8px 0 4px;
+font-size:0.98rem;
+}
+
 /* GALERIA ---------------------------------------------- */
 .gallery{
 display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;
@@ -73,14 +97,12 @@ display:block;
 }
 
 /* E-BOOK ------------------------------------------------ */
-.ebook object{
-width:100%;height:480px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);background:#fff;
-}
 .ebook-actions{margin-top:10px}
 .ebook-link-btn{
 display:inline-block;padding:10px 16px;border-radius:8px;
 background:var(--primary);color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;
 }
+.ebook-note{margin-top:6px;font-size:0.9rem;color:#666;}
 
 /* RODAPÉ & MODAL --------------------------------------- */
 footer{margin-top:28px;text-align:center;font-size:0.95rem}
@@ -101,15 +123,21 @@ max-height:80vh;overflow:auto;
 @media (max-width:980px){
 .hero{grid-template-columns:1fr;gap:18px}
 .hero-photo{height:40vh}
-.side-photo{width:100%;height:200px}
+.side-photo{width:100%;height:220px}
 .gallery{grid-template-columns:repeat(2,1fr)}
 .two-col{flex-direction:column}
 }
 
 @media (max-width:768px){
-.ebook object{display:none;} /* no celular, só botão */
+.side-photo{
+width:100%;
+height:auto;
+max-height:320px;
+object-fit:contain; /* no celular não corta a foto do quadro */
+object-position:center center;
+}
 .gimg img{
-object-fit:contain; /* no celular NÃO corta rosto/quadro */
+object-fit:contain; /* no celular não corta a cabeça na galeria */
 object-position:center center;
 }
 }
@@ -143,38 +171,114 @@ CRP 01/21617 · Atendimento presencial e online · +14.000 atendimentos
 <section class="section">
 <h2>Quem é Maycon</h2>
 <p class="muted">
-<strong>Brasiliense. Pai. Estudioso.</strong> Atuação clínica desde 2016 em vínculos, sexualidade, lutos e transtornos de humor.
+<strong>Brasiliense. Pai. Estudioso.</strong> Atua na clínica desde 2016 em vínculos, sexualidade, lutos e transtornos de humor, integrando rigor teórico e sensibilidade clínica.
 </p>
 </section>
 
-<!-- COMO TRABALHA -->
+<!-- COMO TRABALHA + FOTO LATERAL -->
 <section class="section two-col">
 <div>
 <h2>Como trabalha</h2>
 <p class="muted">
-Escuta profunda, ética e singular. Integra técnicas como hipnoterapia quando clinicamente indicado.
+Escuta profunda, ética e singular. Integra técnicas como hipnoterapia quando clinicamente indicado, sempre respeitando o tempo e a história de cada pessoa.
 </p>
 </div>
-<img id="sideImg" class="side-photo" src="" alt="Maycon em atendimento">
+<img id="sideImg" class="side-photo" src="" alt="Maycon em contexto clínico">
 </section>
 
-<!-- E-BOOK -->
+<!-- MODALIDADES DE ATENDIMENTO (CATÁLOGO) -->
+<section class="section">
+<h2>Modalidades de atendimento</h2>
+<p class="muted">Conheça as principais formas de cuidado disponíveis. Os valores não aparecem aqui — o foco é você entender como cada modalidade funciona.</p>
+
+<div class="services">
+<details class="service">
+<summary>Triagem psicológica</summary>
+<p>A triagem é o primeiro passo. É uma conversa estruturada para mapear suas queixas, sua história e o que você está buscando. A partir dela, Maycon avalia se o melhor caminho é psicoterapia, psicanálise, hipnoterapia, encaminhamento médico ou outros recursos.</p>
+<p>É obrigatória antes de iniciar qualquer processo terapêutico, porque garante cuidado, direção e segurança para o trabalho clínico.</p>
+</details>
+
+<details class="service">
+<summary>Psicoterapia</summary>
+<p>Espaço de fala e escuta para trabalhar sofrimento emocional, ansiedade, depressão, conflitos de relacionamento, decisões de vida e crises em geral. Acontece por meio de encontros regulares, em clima de acolhimento e confidencialidade.</p>
+<p>O objetivo é ampliar consciência, desenvolver recursos de enfrentamento e produzir mudanças concretas no modo de viver e se relacionar.</p>
+</details>
+
+<details class="service">
+<summary>Análise (Psicanálise)</summary>
+<p>Processo mais aprofundado, voltado para o inconsciente e para aquilo que se repete na sua vida sem que você entenda bem o porquê. A associação livre é o eixo do trabalho: falar sem censura para permitir que algo novo apareça.</p>
+<p>Não é técnica de relaxamento: é um caminho de confronto consigo mesmo, para deixar de “dormir na vida” e assumir o próprio desejo.</p>
+</details>
+
+<details class="service">
+<summary>Hipnoterapia</summary>
+<p>Uso clínico da hipnose como ferramenta complementar. Ajuda a acessar conteúdos profundos, ressignificar experiências e aliviar sintomas ligados a traumas, fobias, hábitos e dores emocionais.</p>
+<p>É conduzida de forma ética e segura, com foco em ampliar a consciência e favorecer mudanças duradouras.</p>
+</details>
+
+<details class="service">
+<summary>Terapia de casal</summary>
+<p>Atendimento conjunto para casais que desejam compreender a dinâmica da relação, reduzir conflitos e reconstruir confiança. O foco é trabalhar comunicação, acordos, responsabilidade de cada um e a história do vínculo.</p>
+<p>Ajuda o casal a sair de ciclos repetitivos de briga, silêncio ou afastamento, favorecendo decisões mais conscientes sobre permanecer, transformar ou encerrar a relação.</p>
+</details>
+
+<details class="service">
+<summary>Orientação parental</summary>
+<p>Voltada a pais, mães ou responsáveis que enfrentam dificuldades com limites, comportamento, rotina e diálogo com crianças ou adolescentes.</p>
+<p>O objetivo é oferecer novas estratégias educativas e de comunicação, fortalecendo a presença parental e a construção de vínculos mais seguros.</p>
+</details>
+
+<details class="service">
+<summary>Sexualidade</summary>
+<p>Acompanhamento de questões ligadas à vida sexual e afetiva: dificuldade de desejo, prazer, excitação, orgasmo, bloqueios e conflitos conjugais relacionados à sexualidade.</p>
+<p>O trabalho considera aspectos emocionais, corporais e relacionais, sem moralismo, com respeito à singularidade de cada história.</p>
+</details>
+
+<details class="service">
+<summary>Supervisão de casos clínicos</summary>
+<p>Espaço para psicólogos, estagiários e recém-formados discutirem casos, dúvidas técnicas e posicionamento ético. Ajuda a sustentar o lugar de terapeuta com mais segurança.</p>
+<p>Inclui discussão de casos, elaboração de hipóteses, treino de intervenções e reflexão sobre a própria prática clínica.</p>
+</details>
+
+<details class="service">
+<summary>Atendimento online assíncrono</summary>
+<p>Modalidade em que terapeuta e paciente não precisam estar conectados ao mesmo tempo. A comunicação acontece por áudios ou mensagens de texto, em dias combinados.</p>
+<p>É uma forma moderna de acompanhamento para quem tem rotina mais flexível ou prefere se expressar por escrito ou por áudios ao longo da semana.</p>
+</details>
+
+<details class="service">
+<summary>Avaliação psicológica</summary>
+<p>Processo estruturado que envolve entrevistas e, quando necessário, aplicação de testes psicológicos para compreender funcionamento emocional, cognitivo e comportamental.</p>
+<p>Pode ser utilizada para fins clínicos, cirúrgicos, educacionais ou jurídicos (como bariátrica, vasectomia, laqueadura, TDAH, entre outros).</p>
+</details>
+
+<details class="service">
+<summary>Palestras e cursos</summary>
+<p>Atividades psicoeducativas para escolas, empresas e eventos. Trabalham temas como saúde mental, vínculos, emoções, comunicação e prevenção ao adoecimento psíquico.</p>
+<p>Podem ser desenhadas sob medida para a demanda da instituição, sempre com linguagem acessível e embasamento técnico.</p>
+</details>
+
+<details class="service">
+<summary>Assinaturas de acompanhamento</summary>
+<p>Modelo em que o paciente contrata um pacote mensal de sessões, facilitando a continuidade do processo terapêutico e a organização financeira.</p>
+<p>Funciona de forma semelhante a uma assinatura de serviço: as condições são combinadas previamente em contrato e revisadas conforme a necessidade clínica.</p>
+</details>
+</div>
+</section>
+
+<!-- E-BOOK (AGORA SÓ LINK) -->
 <section class="section">
 <h2>E-book da Formação</h2>
 <p class="muted">
 Visão geral da formação livre em Psicanálise Clínica (39 meses — Instituto LivreMent).
 </p>
-
-<div class="ebook">
-<!-- embed para desktop -->
-<object id="ebookObject" data="ebook.pdf" type="application/pdf"></object>
-
-<!-- botão para desktop + celular -->
 <div class="ebook-actions">
-<a id="ebookLinkBtn" class="ebook-link-btn" href="ebook.pdf" target="_blank" rel="noopener">
+<a class="ebook-link-btn" href="ebook.pdf" target="_blank" rel="noopener">
 📄 Abrir e-book (tela cheia)
 </a>
 </div>
+<div class="ebook-note">
+Se preferir, você pode salvar o arquivo no seu dispositivo para ler com conforto.
 </div>
 </section>
 
@@ -222,7 +326,7 @@ document.head.appendChild(t);
 },0);
 </script>
 
-<!-- Imagens -->
+<!-- Imagens + modal -->
 <script>
 const heroImgs=['images/maycon-1.jpg','maycon-1.jpg'];
 const sideImgs=['images/maycon-2.jpg','maycon-2.jpg'];
@@ -268,5 +372,6 @@ document.addEventListener('keydown', e=>{if(e.key==='Escape') hideModal();});
 </script>
 </body>
 </html>
+
 
 
