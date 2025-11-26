@@ -32,7 +32,19 @@ display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;
 .lead{margin-top:10px;font-size:1.02rem}
 .meta{margin-top:12px;font-size:0.98rem}
 
-.hero-photo{
+.hero-photo{/* ========================
+AJUSTE — TÍTULO CENTRALIZADO
+======================== */
+.hero h1{
+text-align:center;
+color:var(--primary);
+}
+
+.lead,
+.meta,
+.social-links{
+text-align:center;
+}
 width:100%;height:60vh;max-height:640px;border-radius:12px;
 object-fit:cover;object-position:center top;
 box-shadow:0 12px 30px rgba(0,0,0,0.08);
@@ -372,6 +384,7 @@ document.addEventListener('keydown', e=>{if(e.key==='Escape') hideModal();});
 </script>
 </body>
 </html>
+
 
 
 
