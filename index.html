@@ -9,100 +9,88 @@
 :root{
 --bg:#f6f2ec;
 --card:#ffffff;
---primary:#1F5B7A; /* azul clínico elegante */
+--primary:#1F5B7A;
 --muted:#3f3b38;
---accent:#2A7EA8;
---pill-bg: linear-gradient(135deg, rgba(42,126,168,0.10), rgba(42,126,168,0.04));
 --radius:12px;
 --maxw:1120px;
---serif: "Georgia", "Times New Roman", serif;
+--serif:"Georgia","Times New Roman",serif;
 }
 *{box-sizing:border-box}
 html{font-size:19px}
-body{margin:0;background:var(--bg);color:var(--muted);font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased}
+body{
+margin:0;background:var(--bg);color:var(--muted);
+font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased;
+}
 .wrap{max-width:var(--maxw);margin:20px auto;padding:20px}
-.card{background:var(--card);border-radius:calc(var(--radius));padding:26px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
-/* HERO */
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
-.hero h1{margin:0;font-size:2.1rem;color:var(--primary);letter-spacing:0.2px}
-.lead{margin-top:10px;color:var(--muted);font-size:1.02rem}
-.meta{margin-top:12px;color:var(--muted);font-size:0.98rem}
-/* BADGES: centered, pill style */
-.badges {
-margin-top: 18px;
-display: flex;
-justify-content: center;
-gap: 12px;
-flex-wrap: wrap;
+.card{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+
+.hero{
+display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;
 }
-.badge {
-padding: 10px 16px;
-border-radius: 999px;
-background: rgba(31,91,122,0.10);
-color: var(--primary);
-font-weight: 700;
-border: 1px solid rgba(31,91,122,0.18);
-font-size: 0.95rem;
-letter-spacing: .2px;
-box-shadow: 0 2px 6px rgba(31,91,122,0.08);
+.hero h1{margin:0;font-size:2.1rem;color:var(--primary)}
+.lead{margin-top:10px;font-size:1.02rem}
+.meta{margin-top:12px;font-size:0.98rem}
+
+.badges{
+margin-top:18px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
 }
-/* HERO image */
+.badge{
+padding:10px 16px;border-radius:999px;background:rgba(31,91,122,0.10);
+color:var(--primary);font-weight:700;border:1px solid rgba(31,91,122,0.18);
+font-size:0.95rem;letter-spacing:.2px;box-shadow:0 2px 6px rgba(31,91,122,0.08);
+}
+
 .hero-photo{
-width:100%;
-height:60vh;
-max-height:640px;
-border-radius:12px;
-object-fit:cover;
-object-position:center top; /* preserve head */
+width:100%;height:60vh;max-height:640px;border-radius:12px;
+object-fit:cover;object-position:center top;
 box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
-/* Sections */
+
 .section{margin-top:22px}
 h2{color:var(--primary);margin:0 0 8px;font-size:1.12rem}
-p.muted{color:var(--muted);line-height:1.6;font-size:1rem}
+
 .two-col{display:flex;gap:20px;align-items:flex-start}
-.col{flex:1}
-/* side photo: tall, preserve top so head not cut */
 .side-photo{
-width:320px;
-height:260px;
-object-fit:cover;
-object-position:center top;
-border-radius:10px;
-box-shadow:0 8px 18px rgba(0,0,0,0.06);
+width:320px;height:260px;object-fit:cover;object-position:center top;
+border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.06);
 }
-/* GALLERY larger, no head-cutting */
+
 .gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-margin-top:14px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;
 }
 .gimg{
-width:100%;
-height:250px; /* OPÇÃO 2: 250px de altura */
-border-radius:12px;
-overflow:hidden;
-background:#f0eeeb;
-display:flex;
-align-items:center;
-justify-content:center;
+width:100%;height:250px;border-radius:12px;overflow:hidden;background:#f0eeeb;
+display:flex;align-items:center;justify-content:center;
 }
 .gimg img{
-max-width:100%;
-max-height:100%;
-object-fit:contain; /* preserve whole image, no cut */
+width:100%;height:100%;object-fit:cover;
+object-position:center 18%; /* AJUSTE FINAL PARA MOSTRAR ROSTO */
 display:block;
 }
-.ebook object{width:100%;height:480px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);background:#fff}
-footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+.ebook object{
+width:100%;height:480px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);background:#fff;
+}
+.ebook-actions{margin-top:10px}
+.ebook-link-btn{
+display:inline-block;padding:10px 16px;border-radius:8px;
+background:var(--primary);color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;
+}
+
+footer{margin-top:28px;text-align:center;font-size:0.95rem}
 .small-muted{color:var(--muted);font-size:0.95rem}
-/* modal privacy */
-.modal-backdrop{position:fixed;inset:0;display:none;background:rgba(0,0,0,0.45);z-index:999}
-.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(920px,94%);background:var(--card);border-radius:10px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;display:none;max-height:80vh;overflow:auto}
+
+.modal-backdrop{
+position:fixed;inset:0;display:none;background:rgba(0,0,0,0.45);z-index:999;
+}
+.modal{
+position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+width:min(920px,94%);background:var(--card);border-radius:10px;padding:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;display:none;
+max-height:80vh;overflow:auto;
+}
 .modal h3{margin-top:0;color:var(--primary)}
-.modal .close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:1.1rem;cursor:pointer;color:var(--muted)}
-/* responsive */
+
 @media (max-width:980px){
 .hero{grid-template-columns:1fr;gap:18px}
 .hero-photo{height:40vh}
@@ -110,195 +98,112 @@ footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
 .gallery{grid-template-columns:repeat(2,1fr)}
 .two-col{flex-direction:column}
 }
+
+@media (max-width:768px){
+.ebook object{display:none;}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <div class="card">
 
-<!-- HERO -->
-<header class="hero" role="banner" aria-label="Apresentação do profissional">
+<header class="hero">
 <div>
 <h1>Maycon Barboza</h1>
-<div class="lead">Psicólogo, Psicanalista e Educador Clínico — Clínica integrativa com foco em vínculos, transtornos de humor e sexualidade.</div>
-<div class="meta"><strong>CRP 01/21617</strong> · Atendimento presencial e online · +14.000 atendimentos</div>
+<div class="lead">Psicólogo, Psicanalista e Educador Clínico — 14+ mil atendimentos desde 2016.</div>
+<div class="meta"><strong>CRP 01/21617</strong> · Atendimento online e presencial</div>
 
-<!-- BADGES centralizados -->
-<div class="badges" aria-hidden="true">
+<div class="badges">
 <span class="badge">Psicanálise Clínica</span>
 <span class="badge">Hipnoterapia</span>
 <span class="badge">Supervisão Clínica</span>
 </div>
 </div>
-
-<!-- HERO IMAGE (resilient loading via script below) -->
-<img id="heroImg" class="hero-photo" src="" alt="Foto de Maycon Barboza — capa">
+<img id="heroImg" class="hero-photo" src="">
 </header>
 
-<!-- Quem é -->
-<section class="section" id="quem-e">
+<section class="section">
 <h2>Quem é Maycon</h2>
-<p class="muted"><strong>Brasiliense. Pai. Estudioso.</strong> Maycon combina rigor teórico e sensibilidade clínica. Vive a experiência do transtorno bipolar tipo II, o que dá um compromisso ético ampliado para compreender o sofrimento emocional. Atua desde 2016 com práticas clínicas e formação.</p>
+<p class="muted"><strong>Brasiliense. Pai. Estudioso.</strong> Atuação clínica desde 2016 em vínculos, sexualidade, lutos e transtornos de humor.</p>
 </section>
 
-<!-- Como trabalha -->
-<section class="section two-col" id="pratica">
-<div class="col">
-<h2>Como trabalha</h2>
-<p class="muted">Escuta psicanalítica profunda e ética, orientada à singularidade. Integra, quando indicado, recursos como hipnoterapia para facilitar o trabalho clínico. Atua em vínculos, transtornos de humor, sexualidade, lutos e supervisão clínica.</p>
-</div>
+<section class="section two-col">
 <div>
-<img id="sideImg" class="side-photo" src="" alt="Maycon — prática clínica">
+<h2>Como trabalha</h2>
+<p class="muted">Escuta profunda, ética e singular. Integra técnicas como hipnoterapia quando clinicamente indicado.</p>
 </div>
+<img id="sideImg" class="side-photo" src="">
 </section>
 
-<!-- Formação -->
-<section class="section" id="formacao">
-<h2>Formação Livre em Psicanálise Clínica — Instituto LivreMent</h2>
-<p class="muted"><strong>Duração:</strong> 39 meses. Tripé: análise pessoal, supervisão e estudo teórico. Metodologia interativa e turmas reduzidas — foco em prática clínica e desenvolvimento profissional.</p>
-</section>
-
-<!-- E-book -->
-<section class="section" id="ebook">
+<section class="section">
 <h2>E-book da Formação</h2>
-<p class="muted">Material resumido com objetivos, cronograma e metodologia. Baixe para consultar detalhes da formação.</p>
+<p class="muted">Visão geral da formação livre em Psicanálise Clínica (39 meses — Instituto LivreMent).</p>
+
 <div class="ebook">
-<object id="ebookObject" data="pdf/ebook.pdf" type="application/pdf">
-<p class="muted">Se o PDF não abrir, <a id="ebookLink" href="pdf/ebook.pdf" download>clique aqui para baixar o e-book</a>.</p>
-</object>
+<object id="ebookObject" data="pdf/ebook.pdf" type="application/pdf"></object>
+
+<div class="ebook-actions">
+<a id="ebookLinkBtn" class="ebook-link-btn" href="pdf/ebook.pdf" target="_blank">📄 Abrir e-book (tela cheia)</a>
+</div>
 </div>
 </section>
 
-<!-- Galeria -->
-<section class="section" id="galeria">
+<section class="section">
 <h2>Imagens</h2>
-<div class="gallery" aria-label="Galeria de fotos">
-<div class="gimg"><img id="g1" alt="Maycon foto 1" src=""></div>
-<div class="gimg"><img id="g2" alt="Maycon foto 2" src=""></div>
-<div class="gimg"><img id="g3" alt="Maycon foto 3" src=""></div>
+<div class="gallery">
+<div class="gimg"><img id="g1"></div>
+<div class="gimg"><img id="g2"></div>
+<div class="gimg"><img id="g3"></div>
 </div>
 </section>
-
-<div class="section small-muted" style="margin-top:18px;">
-<strong>Aviso:</strong> Conteúdo informativo. A assistente Yara é ferramenta de apoio e não substitui avaliação clínica. Em caso de risco, contate serviços de emergência.
-</div>
 
 </div>
 
 <footer>
-<div style="margin-bottom:8px">
-<a id="privacyOpen" class="small-muted" style="text-decoration:underline;cursor:pointer">Política de privacidade</a> · <span class="small-muted">Instagram: @terapeutamaycon</span>
-</div>
-<div class="small-muted">© 2025 · Curadoria e linguagem por Maycon Barboza</div>
+<a id="privacyOpen" style="text-decoration:underline;cursor:pointer">Política de privacidade</a> · @terapeutamaycon
 </footer>
 </div>
 
-<!-- PRIVACY MODAL -->
-<div id="modalBackdrop" class="modal-backdrop" aria-hidden="true"></div>
-<div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
-<button class="close" id="closeModal" aria-label="Fechar">✕</button>
-<h3 id="privacyTitle">Política de Privacidade</h3>
-<p class="muted"><strong>Este site respeita a sua privacidade.</strong> As informações fornecidas voluntariamente (nome, telefone, e-mail) são utilizadas exclusivamente para fins de contato, agendamento ou envio de informações solicitadas pelo usuário. Não vendemos ou compartilhamos seus dados com terceiros, exceto quando exigido por lei.</p>
-<h4 style="color:var(--primary)">Cookies e tecnologias</h4>
-<p class="muted">Podemos utilizar cookies estritamente necessários ao funcionamento do site. A Yara (assistente IBM Watson) pode processar dados em servidores de terceiros conforme as políticas da IBM.</p>
-<h4 style="color:var(--primary)">Segurança</h4>
-<p class="muted">Adotamos medidas técnicas razoáveis para proteger os dados. Entretanto, nenhum sistema é totalmente seguro — em caso de dúvida entre em contato.</p>
-<h4 style="color:var(--primary)">Contato</h4>
-<p class="muted">Dúvidas sobre privacidade: entre em contato via WhatsApp ou e-mail informados no site.</p>
-<p class="muted" style="margin-top:12px">Última atualização: 2025</p>
+<div id="modalBackdrop" class="modal-backdrop"></div>
+<div id="privacyModal" class="modal">
+<button id="closeModal" style="position:absolute;right:12px;top:8px;font-size:1.1rem;border:none;background:none">✕</button>
+<h3>Política de Privacidade</h3>
+<p class="muted">Uso apenas para atendimento ou retorno solicitado. Nenhum dado é vendido ou compartilhado.</p>
 </div>
 
-<!-- WATSON (YARA) -->
+<!-- Watson Yara -->
 <script>
-window.watsonAssistantChatOptions = {
-integrationID: "6f4c306d-a746-496f-b2c1-0ecf69b69af3",
-region: "us-south",
-serviceInstanceID: "99b8a9c7-7e40-4178-965d-4b0ded28035a",
-onLoad: async (instance) => {
-await instance.render();
-setTimeout(()=>{ try{ instance.openWindow(); }catch(e){} },2000);
+window.watsonAssistantChatOptions={
+integrationID:"6f4c306d-a746-496f-b2c1-0ecf69b69af3",
+region:"us-south",
+serviceInstanceID:"99b8a9c7-7e40-4178-965d-4b0ded28035a",
+onLoad:async(i)=>{await i.render();
+if(window.innerWidth>900){setTimeout(()=>{try{i.openWindow();}catch(e){}},2000);}
 }
 };
-setTimeout(function(){
-const t=document.createElement('script');
-t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/"
-+ (window.watsonAssistantChatOptions.clientVersion || 'latest')
-+ "/WatsonAssistantChatEntry.js";
+setTimeout(()=>{const t=document.createElement('script');
+t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
 document.head.appendChild(t);
-});
+},0);
 </script>
 
-<!-- Script: resilient image/pdf loading + modal logic -->
+<!-- Imagens e PDF -->
 <script>
-const heroCandidates = ['images/maycon-1.jpg','maycon-1.jpg','/mnt/data/FAE074C2-FA83-4DA6-847F-32BB45495631.jpeg'];
-const sideCandidates = ['images/maycon-2.jpg','maycon-2.jpg','/mnt/data/EB8BEE95-2113-4781-8A20-A893C88EFD3B.jpeg'];
-const galleryCandidates = ['images/maycon-3.jpg','maycon-3.jpg','/mnt/data/7D8D8CC6-7514-42AB-A9D0-69FEB373E401.jpeg'];
+const hero=['images/maycon-1.jpg','maycon-1.jpg'];
+const side=['images/maycon-2.jpg','maycon-2.jpg'];
+const g3=['images/maycon-3.jpg','maycon-3.jpg'];
 
-function tryLoad(imgEl, candidates, finalStyle){
-let i=0;
-function next(){
-if(i>=candidates.length){ if(imgEl) imgEl.style.display='none'; return; }
-const url=candidates[i++];
-const tester = new Image();
-tester.onload = ()=>{ if(imgEl){ imgEl.src = url; if(finalStyle) Object.assign(imgEl.style, finalStyle); imgEl.style.display='block'; } };
-tester.onerror = ()=>{ next(); };
-tester.src = url;
-}
-next();
-}
-
-// load hero, side and gallery images
-tryLoad(document.getElementById('heroImg'), heroCandidates, {'objectPosition':'center top'});
-tryLoad(document.getElementById('sideImg'), sideCandidates, {'objectPosition':'center top'});
-
-// gallery imgs: use contain to avoid cutting heads
-tryLoad(document.getElementById('g1'), galleryCandidates, {'objectFit':'contain'});
-tryLoad(document.getElementById('g2'), sideCandidates, {'objectFit':'contain'});
-tryLoad(document.getElementById('g3'), heroCandidates, {'objectFit':'contain'});
-
-// PDF fallback: tries pdf/ebook.pdf then ebook.pdf
-(async function checkPdf(){
-const candidates = ['pdf/ebook.pdf','ebook.pdf'];
-for(const p of candidates){
-try{
-const res = await fetch(p,{method:'HEAD'});
-if(res.ok){
-const obj = document.getElementById('ebookObject');
-if(obj) obj.data = p;
-const link = document.getElementById('ebookLink');
-if(link) link.href = p;
-return;
-}
-}catch(e){}
-}
-console.warn('PDF não encontrado nos caminhos tentados.');
+function load(id,arr){
+const img=document.getElementById(id);let i=0;
+(function next(){if(i>=arr.length)return;
+const t=new Image();const url=arr[i++];
+t.onload=()=>img.src=url;
+t.onerror=next;t.src=url;
 })();
-
-// Modal logic for privacy
-const modal = document.getElementById('privacyModal');
-const backdrop = document.getElementById('modalBackdrop');
-const open = document.getElementById('privacyOpen');
-const close = document.getElementById('closeModal');
-
-function showModal(){
-backdrop.style.display='block';
-modal.style.display='block';
-backdrop.setAttribute('aria-hidden','false');
-modal.setAttribute('aria-hidden','false');
-close.focus();
 }
-function hideModal(){
-backdrop.style.display='none';
-modal.style.display='none';
-backdrop.setAttribute('aria-hidden','true');
-modal.setAttribute('aria-hidden','true');
-}
-open.addEventListener('click', showModal);
-close.addEventListener('click', hideModal);
-backdrop.addEventListener('click', hideModal);
-document.addEventListener('keydown', function(e){
-if(e.key === 'Escape'){ hideModal(); }
-});
+load('heroImg',hero);load('sideImg',side);
+load('g1',hero);load('g2',side);load('g3',g3);
 </script>
 </body>
 </html>
