@@ -7,16 +7,30 @@
 <meta name="description" content="Maycon Barboza — atendimento clínico desde 2016, com foco em vínculos, transtornos de humor e sexualidade.">
 <style>
 :root{
---bg:#f6f2ec;
---card:#ffffff;
---primary:#1F5B7A;
---muted:#3f3b38;
---radius:12px;
---maxw:1120px;
---serif:"Georgia","Times New Roman",serif;
-  <a href="https://instagram.com/terapeutamaycon" target="_blank" class="instagram-btn">
-<i>📎</i> Abrir Instagram
-</a>
+/* BOTÃO INSTAGRAM — VISUAL PREMIUM */
+.instagram-btn{
+background:#1F5B7A; /* azul psicológico */
+color:#ffffff;
+font-weight:600;
+padding:14px 28px;
+border-radius:10px;
+display:inline-block;
+text-decoration:none;
+font-size:1.05rem;
+letter-spacing:0.3px;
+margin-top:22px;
+box-shadow:0 6px 14px rgba(0,0,0,0.10);
+transition:.25s ease;
+}
+.instagram-btn:hover{
+background:#14445b;
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,.18);
+}
+.instagram-btn i{
+margin-right:10px;
+font-style:normal;
+}
 
 }
 *{box-sizing:border-box}
@@ -164,8 +178,10 @@ CRP 01/21617 · Atendimento online· +14.000 atendimentos
 </p>
 <p class="muted">
 Desde 2016, realizou mais de 14 mil atendimentos em diferentes contextos, acolhendo pessoas em sofrimento emocional, casais em crise, famílias em conflito e profissionais em supervisão. É presença ativa nas redes sociais pelo perfil <strong>@terapeutamaycon</strong>, onde compartilha reflexões sobre vínculos, sofrimento psíquico e saúde mental de forma ética, acessível e responsável.
-</p><a href="https://instagram.com/terapeutamaycon" target="_blank" class="instagram-btn">
-<i>📎</i> Abrir Instagram
+</p><a href="https://instagram.com/terapeutamaycon"
+target="_blank"
+class="instagram-btn">
+<i>📎</i> Ver Instagram do Maycon
 </a>
 
 </section>
@@ -295,8 +311,17 @@ Se preferir, você pode salvar o arquivo no seu dispositivo para ler com mais ca
 
 </div>
 
-<footer>
-<a id="privacyOpen" style="text-decoration:underline;cursor:pointer">Política de privacidade</a> · @terapeutamaycon
+<footer style="text-align:center;margin-top:34px">
+<a id="privacyOpen" style="text-decoration:underline;cursor:pointer;margin-right:12px">
+Política de privacidade
+</a>
+
+<a href="https://instagram.com/terapeutamaycon"
+target="_blank"
+class="instagram-btn"
+style="margin-left:10px;">
+<i>📎</i> Instagram
+</a>
 </footer>
 </div>
 
@@ -373,6 +398,7 @@ document.addEventListener('keydown', e=>{if(e.key==='Escape') hideModal();});
 </script>
 </body>
 </html>
+
 
 
 
