@@ -130,7 +130,25 @@ width:min(920px,94%);background:var(--card);border-radius:10px;padding:20px;
 box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;display:none;
 max-height:80vh;overflow:auto;
 }
-.modal h3{margin-top:0;color:var(--primary)}
+.modal h3{margin-top:0;color:var(--primary)}/* ===== INDICAÇÃO DO CHAT - MOBILE ===== */
+.iara-hint{
+position:fixed;
+right:16px;
+bottom:95px;
+background:var(--primary);
+color:#fff;
+font-size:0.82rem;
+padding:6px 10px;
+border-radius:20px;
+box-shadow:0 4px 10px rgba(0,0,0,.25);
+display:none;
+z-index:99999;
+}
+
+/* Exibe APENAS em telas pequenas */
+@media(max-width:768px){
+.iara-hint{display:block;}
+}
 
 /* RESPONSIVO ------------------------------------------- */
 @media (max-width:980px){
@@ -391,9 +409,16 @@ openBtn.addEventListener('click', showModal);
 closeBtn.addEventListener('click', hideModal);
 backdrop.addEventListener('click', hideModal);
 document.addEventListener('keydown', e=>{if(e.key==='Escape') hideModal();});
-</script>
+</script><!-- Balão de indicação do chat no mobile -->
+<div class="iara-hint">
+💬 Fale com a Iara
+</div>
+
 </body>
 </html>
+</body>
+</html>
+
 
 
 
