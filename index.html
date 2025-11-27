@@ -171,7 +171,34 @@ object-position:center center;
 object-fit:contain; /* no celular não corta a cabeça na galeria */
 object-position:center center;
 }
+}/* === ESTILO DO ANALISTA REATIVO === */
+.ar-box{
+background:#fdf9f3;
+border-radius:12px;
+padding:18px;
+display:flex;
+gap:18px;
+align-items:flex-start;
+border:1px solid rgba(0,0,0,0.06);
+margin-top:22px;
 }
+
+.ar-img{
+width:220px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,.1);
+flex-shrink:0;
+}
+
+@media(max-width:768px){
+.ar-box{flex-direction:column;}
+.ar-img{
+width:100%;
+max-width:260px;
+margin:0 auto;
+}
+}
+
 </style>
 </head>
 <body>
@@ -321,6 +348,29 @@ Visão geral da formação livre em Psicanálise Clínica (39 meses — Institut
 Se preferir, você pode salvar o arquivo no seu dispositivo para ler com mais calma.
 </div>
 </section>
+ <!-- ANALISTA REATIVO -->
+<section class="section">
+<h2>Analista Reativo — apoio entre sessões</h2>
+
+<div class="ar-box">
+<img src="analista-reativo.jpg" class="ar-img" alt="Representação reflexiva do Analista Reativo">
+
+<div>
+<p class="muted">
+O <strong>Analista Reativo</strong> é um recurso complementar entre sessões.
+Ele reage ao que você compartilha, provoca reflexão, ajuda a organizar o interno
+e mantém o processo ativo no intervalo entre um encontro e outro.
+</p>
+
+<p class="muted">
+Não substitui terapia — ele dá continuidade mental, alivia a ansiedade,
+amplia percepção e permite que o pensamento siga trabalhando.
+</p>
+
+<p class="muted"><strong>Acesso exclusivo para pacientes.</strong></p>
+</div>
+</div>
+</section>
 
 <!-- GALERIA -->
 <section class="section">
@@ -418,6 +468,7 @@ document.addEventListener('keydown', e=>{if(e.key==='Escape') hideModal();});
 </html>
 </body>
 </html>
+
 
 
 
