@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" /><meta name="google-site-verification" content="HwJ9dwezqWNKr0JNHqxHIqp6dp31o00n9FeJolD2W8k" />
+<meta charset="utf-8" />
+<meta name="google-site-verification" content="HwJ9dwezqWNKr0JNHqxHIqp6dp31o00n9FeJolD2W8k" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
 <title>Psicólogo em Brasília - Maycon Barboza — Psicólogo, Psicanalista, Sexólogo & Educador</title>
-<meta name="description" content="Psicólogo e Psicanalísta em Brasília. Atendimento online com foco em vínculos, transtornos de humor sexualidade e saúde mental. Conheça o trabalho de Maycon Barboza">
+<meta name="description" content="Psicólogo e Psicanalísta em Brasília. Atendimento online com foco em vínculos, transtornos de humor, sexualidade e saúde mental. Conheça o trabalho de Maycon Barboza.">
+
 <style>
 :root{
 --bg:#f6f2ec;
@@ -15,14 +18,39 @@
 --maxw:1120px;
 --serif:"Georgia","Times New Roman",serif;
 }
+
 *{box-sizing:border-box}
+
 html{font-size:19px}
+
 body{
-margin:0;background:var(--bg);color:var(--muted);
-font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased;
+margin:0;
+background:var(--bg);
+color:var(--muted);
+font-family:var(--serif);
+line-height:1.62;
+-webkit-font-smoothing:antialiased;
 }
-.wrap{max-width:var(--maxw);margin:20px auto;padding:20px}
-.card{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+
+p{margin:0 0 0.8em;}
+
+.muted{
+color:var(--muted);
+font-size:0.98rem;
+}
+
+.wrap{
+max-width:var(--maxw);
+margin:20px auto;
+padding:20px;
+}
+
+.card{
+background:var(--card);
+border-radius:var(--radius);
+padding:26px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
 
 /* HERO -------------------------------------------------- */
 .hero{
@@ -35,8 +63,8 @@ align-items:center;
 .hero h1{
 margin:0;
 font-size:2.1rem;
-color:var(--primary); /* AZUL */
-text-align:center; /* CENTRALIZADO */
+color:var(--primary);
+text-align:center;
 }
 
 .lead{
@@ -60,35 +88,71 @@ object-fit:cover;
 object-position:center top;
 box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
+
 /* SEÇÕES ------------------------------------------------ */
 .section{margin-top:18px}
-h2{color:var(--primary);margin:0 0 8px;font-size:1.12rem}
 
-.two-col{display:flex;gap:20px;align-items:flex-start}
-.side-photo{
-width:320px;height:260px;object-fit:cover;object-position:center top;
-border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.06);
+h2{
+color:var(--primary);
+margin:0 0 8px;
+font-size:1.12rem;
 }
 
-/* MODALIDADES (botões/accordions) ----------------------- */
+.two-col{
+display:flex;
+gap:20px;
+align-items:flex-start;
+}
+
+.side-photo{
+width:320px;
+height:260px;
+object-fit:cover;
+object-position:center top;
+border-radius:10px;
+box-shadow:0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* BOTÃO INSTAGRAM -------------------------------------- */
+.instagram-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+border-radius:8px;
+background:#fdf9f3;
+color:var(--primary);
+text-decoration:none;
+font-size:0.95rem;
+border:1px solid rgba(0,0,0,0.06);
+}
+
+.instagram-btn:hover{
+text-decoration:underline;
+}
+
+/* MODALIDADES (accordion) ------------------------------ */
 .services{
 display:grid;
 gap:12px;
 margin-top:10px;
 }
+
 details.service{
 background:#fdf9f3;
 border-radius:12px;
 padding:10px 14px;
 box-shadow:0 4px 10px rgba(0,0,0,0.04);
 }
+
 details.service summary{
 list-style:none;
 cursor:pointer;
 font-weight:700;
 color:var(--primary);
 }
+
 details.service summary::-webkit-details-marker{display:none;}
+
 details.service p{
 margin:8px 0 4px;
 font-size:0.98rem;
@@ -96,41 +160,93 @@ font-size:0.98rem;
 
 /* GALERIA ---------------------------------------------- */
 .gallery{
-display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:14px;
 }
+
 .gimg{
-width:100%;height:250px;border-radius:12px;overflow:hidden;background:#f0eeeb;
-display:flex;align-items:center;justify-content:center;
+width:100%;
+height:250px;
+border-radius:12px;
+overflow:hidden;
+background:#f0eeeb;
+display:flex;
+align-items:center;
+justify-content:center;
 }
+
 .gimg img{
-width:100%;height:100%;
+width:100%;
+height:100%;
 object-fit:cover;
-object-position:center 18%; /* desktop: rosto + quadro equilibrados */
+object-position:center 18%;
 display:block;
 }
 
 /* E-BOOK ------------------------------------------------ */
 .ebook-actions{margin-top:10px}
+
 .ebook-link-btn{
-display:inline-block;padding:10px 16px;border-radius:8px;
-background:var(--primary);color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;
+display:inline-block;
+padding:10px 16px;
+border-radius:8px;
+background:var(--primary);
+color:#fff;
+text-decoration:none;
+font-weight:600;
+font-size:0.95rem;
 }
-.ebook-note{margin-top:6px;font-size:0.9rem;color:#666;}
+
+.ebook-note{
+margin-top:6px;
+font-size:0.9rem;
+color:#666;
+}
 
 /* RODAPÉ & MODAL --------------------------------------- */
-footer{margin-top:28px;text-align:center;font-size:0.95rem}
-.small-muted{color:var(--muted);font-size:0.95rem}
+footer{
+margin-top:28px;
+text-align:center;
+font-size:0.95rem;
+}
+
+.small-muted{
+color:var(--muted);
+font-size:0.95rem;
+}
 
 .modal-backdrop{
-position:fixed;inset:0;display:none;background:rgba(0,0,0,0.45);z-index:999;
+position:fixed;
+inset:0;
+display:none;
+background:rgba(0,0,0,0.45);
+z-index:999;
 }
+
 .modal{
-position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
-width:min(920px,94%);background:var(--card);border-radius:10px;padding:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;display:none;
-max-height:80vh;overflow:auto;
+position:fixed;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:min(920px,94%);
+background:var(--card);
+border-radius:10px;
+padding:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.25);
+z-index:1000;
+display:none;
+max-height:80vh;
+overflow:auto;
 }
-.modal h3{margin-top:0;color:var(--primary)}/* ===== INDICAÇÃO DO CHAT - MOBILE ===== */
+
+.modal h3{
+margin-top:0;
+color:var(--primary);
+}
+
+/* ===== INDICAÇÃO DO CHAT - MOBILE ===== */
 .iara-hint{
 position:fixed;
 right:16px;
@@ -150,28 +266,7 @@ z-index:99999;
 .iara-hint{display:block;}
 }
 
-/* RESPONSIVO ------------------------------------------- */
-@media (max-width:980px){
-.hero{grid-template-columns:1fr;gap:18px}
-.hero-photo{height:40vh}
-.side-photo{width:100%;height:220px}
-.gallery{grid-template-columns:repeat(2,1fr)}
-.two-col{flex-direction:column}
-}
-
-@media (max-width:768px){
-.side-photo{
-width:100%;
-height:auto;
-max-height:320px;
-object-fit:contain; /* no celular não corta a foto do quadro */
-object-position:center center;
-}
-.gimg img{
-object-fit:contain; /* no celular não corta a cabeça na galeria */
-object-position:center center;
-}
-}/* === ESTILO DO ANALISTA REATIVO === */
+/* ANALISTA REATIVO ------------------------------------- */
 .ar-box{
 background:#fdf9f3;
 border-radius:12px;
@@ -199,6 +294,38 @@ margin:0 auto;
 }
 }
 
+/* RESPONSIVO ------------------------------------------- */
+@media (max-width:980px){
+.hero{
+grid-template-columns:1fr;
+gap:18px;
+}
+.hero-photo{height:40vh}
+.side-photo{
+width:100%;
+height:220px;
+}
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+.two-col{
+flex-direction:column;
+}
+}
+
+@media (max-width:768px){
+.side-photo{
+width:100%;
+height:auto;
+max-height:320px;
+object-fit:contain;
+object-position:center center;
+}
+.gimg img{
+object-fit:contain;
+object-position:center center;
+}
+}
 </style>
 </head>
 <body>
@@ -227,10 +354,14 @@ CRP 01/21617 · Atendimento online · +14.000 atendimentos
 </p>
 <p class="muted">
 Desde 2016, realizou mais de 14 mil atendimentos em diferentes contextos, acolhendo pessoas em sofrimento emocional, casais em crise, famílias em conflito e profissionais em supervisão. É presença ativa nas redes sociais pelo perfil <strong>@terapeutamaycon</strong>, onde compartilha reflexões sobre vínculos, sofrimento psíquico e saúde mental de forma ética, acessível e responsável.
-</p><a href="https://instagram.com/terapeutamaycon"
+</p>
+<a
+href="https://instagram.com/terapeutamaycon"
 target="_blank"
-class="instagram-btn">
-<i> </i> Ver Instagram do Maycon Barboza
+class="instagram-btn"
+rel="noopener noreferrer"
+>
+Ver Instagram do Maycon Barboza
 </a>
 </section>
 
@@ -254,7 +385,9 @@ O objetivo não é apenas aliviar sintomas, mas favorecer mudanças estruturais:
 <!-- MODALIDADES DE ATENDIMENTO -->
 <section class="section">
 <h2>Modalidades de Atendimento</h2>
-<p class="muted">Conheça as principais formas de cuidado disponíveis. Para saber valores, converse com a Assistente Yara no canto inferior da tela</p>
+<p class="muted">
+Conheça as principais formas de cuidado disponíveis. Para saber valores, converse com a Assistente Yara no canto inferior da tela.
+</p>
 
 <div class="services">
 <details class="service">
@@ -325,10 +458,7 @@ O objetivo não é apenas aliviar sintomas, mas favorecer mudanças estruturais:
 
 <details class="service">
 <summary>Formação em Psicanálise Clínica</summary>
-<p> A formação livre em psicanálise clínica é indicada
- para quem quer aprender sobre psicanálise, seja
- para atuar como psicanalista futuramente,
- pesquisar ou aprimorar a sua prática profissional.</p>
+<p>A formação livre em psicanálise clínica é indicada para quem quer aprender sobre psicanálise, seja para atuar como psicanalista futuramente, pesquisar ou aprimorar a sua prática profissional.</p>
 </details>
 </div>
 </section>
@@ -341,12 +471,15 @@ Visão geral da formação livre em Psicanálise Clínica (39 meses — Institut
 </p>
 <div class="ebook-actions">
 <a class="ebook-link-btn" href="ebook.pdf" target="_blank" rel="noopener">
- Abrir e-book (tela cheia)
+Abrir e-book (tela cheia)
 </a>
 </div>
 <div class="ebook-note">
 Se preferir, você pode salvar o arquivo no seu dispositivo para ler com mais calma.
 </div>
+</section>
+
+<!-- ANALISTA REATIVO -->
 <section class="section">
 <h2>Analista Reativo — Apoio Entre Sessões</h2>
 
@@ -355,20 +488,15 @@ Se preferir, você pode salvar o arquivo no seu dispositivo para ler com mais ca
 
 <div>
 <p class="muted">
-O <strong>Analista Reativo</strong> É um recurso baseado em Inteligência Artificial
-treinado com o estilo clínico, a escuta e a forma de levantar reflexões do Maycon Barboza.
-Ele existe para te acompanhar entre uma sessão e outra.
+O <strong>Analista Reativo</strong> é um recurso baseado em Inteligência Artificial treinado com o estilo clínico, a escuta e a forma de levantar reflexões do Maycon Barboza. Ele existe para te acompanhar entre uma sessão e outra.
 </p>
 
 <p class="muted">
-Você escreve. Ele responde.
-Não com frases prontas, mas com perguntas, devolutivas e provocações internas,
-como um espaço de continência quando algo acontece e o próximo encontro ainda não chegou.
+Você escreve. Ele responde. Não com frases prontas, mas com perguntas, devolutivas e provocações internas, como um espaço de continência quando algo acontece e o próximo encontro ainda não chegou.
 </p>
 
 <p class="muted">
-É útil quando surge uma angústia no meio da semana, um pensamento que não te larga,
-um conflito que precisa ser elaborado ou uma questão que você deseja refletir antes da sessão.
+É útil quando surge uma angústia no meio da semana, um pensamento que não te larga, um conflito que precisa ser elaborado ou uma questão que você deseja refletir antes da sessão.
 </p>
 
 <p class="muted">
@@ -402,114 +530,108 @@ um conflito que precisa ser elaborado ou uma questão que você deseja refletir 
 
 <!-- MODAL PRIVACIDADE -->
 <div id="modalBackdrop" class="modal-backdrop"></div>
-<div id="privacyModal" class="modal">
-<button id="closeModal" style="position:absolute;right:12px;top:8px;font-size:1.1rem;border:none;background:none;cursor:pointer">✕</button>
-<h3>Política de Privacidade</h3>
-<p class="muted">Os dados informados são utilizados apenas para contato e retorno de mensagens. Não são vendidos ou compartilhados com terceiros.</p>
+<div
+id="privacyModal"
+class="modal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="privacyTitle"
+>
+<button
+id="closeModal"
+style="position:absolute;right:12px;top:8px;font-size:1.1rem;border:none;background:none;cursor:pointer"
+aria-label="Fechar"
+>
+✕
+</button>
+<h3 id="privacyTitle">Política de Privacidade</h3>
+<p class="muted">
+Os dados informados são utilizados apenas para contato e retorno de mensagens. Não são vendidos ou compartilhados com terceiros.
+</p>
 </div>
 
-<!-- YARA (Watson Assistant) -->
-<script>
-window.watsonAssistantChatOptions={
-integrationID:"6f4c306d-a746-496f-b2c1-0ecf69b69af3",
-region:"us-south",
-serviceInstanceID:"99b8a9c7-7e40-4178-965d-4b0ded28035a",
-onLoad:async(i)=>{await i.render();
-if(window.innerWidth>900){ // só abre automático em telas maiores
-setTimeout(()=>{try{i.openWindow();}catch(e){}},2000);
-}
-}
-};
-setTimeout(()=>{
-const t=document.createElement('script');
-t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
-document.head.appendChild(t);
-},0);
-</script>
-
-<!-- Imagens + modal -->
-<script>
-const heroImgs=['images/maycon-1.jpg','maycon-1.jpg'];
-const sideImgs=['images/maycon-2.jpg','maycon-2.jpg'];
-const g3Imgs =['images/maycon-3.jpg','maycon-3.jpg'];
-
-function loadImage(id, arr){
-const el=document.getElementById(id);
-let i=0;
-(function next(){
-if(!el || i>=arr.length) return;
-const test=new Image();
-const url=arr[i++];
-test.onload=()=>{el.src=url;};
-test.onerror=next;
-test.src=url;
-})();
-}
-
-loadImage('heroImg', heroImgs);
-loadImage('sideImg', sideImgs);
-loadImage('g1', heroImgs);
-loadImage('g2', sideImgs);
-loadImage('g3', g3Imgs);
-
-// Modal privacidade
-const modal=document.getElementById('privacyModal');
-const backdrop=document.getElementById('modalBackdrop');
-const openBtn=document.getElementById('privacyOpen');
-const closeBtn=document.getElementById('closeModal');
-
-function showModal(){
-backdrop.style.display='block';
-modal.style.display='block';
-}
-function hideModal(){
-backdrop.style.display='none';
-modal.style.display='none';
-}
-openBtn.addEventListener('click', showModal);
-closeBtn.addEventListener('click', hideModal);
-backdrop.addEventListener('click', hideModal);
-document.addEventListener('keydown', e=>{if(e.key==='Escape') hideModal();});
-</script><!-- Balão de indicação do chat no mobile -->
+<!-- Balão de indicação do chat no mobile -->
 <div class="iara-hint">
 💬 Fale com a Yara
 </div>
 
+<!-- YARA (Watson Assistant) -->
+<script>
+window.watsonAssistantChatOptions = {
+integrationID: "6f4c306d-a746-496f-b2c1-0ecf69b69af3",
+region: "us-south",
+serviceInstanceID: "99b8a9c7-7e40-4178-965d-4b0ded28035a",
+onLoad: async (instance) => {
+await instance.render();
+if (window.innerWidth > 900) {
+// só abre automático em telas maiores
+setTimeout(() => {
+try {
+instance.openWindow();
+} catch (e) {}
+}, 2000);
+}
+}
+};
+
+setTimeout(() => {
+const t = document.createElement("script");
+t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+document.head.appendChild(t);
+}, 0);
+</script>
+
+<!-- Imagens + modal -->
+<script>
+const heroImgs = ["images/maycon-1.jpg", "maycon-1.jpg"];
+const sideImgs = ["images/maycon-2.jpg", "maycon-2.jpg"];
+const g3Imgs = ["images/maycon-3.jpg", "maycon-3.jpg"];
+
+function loadImage(id, arr){
+const el = document.getElementById(id);
+let i = 0;
+(function next(){
+if (!el || i >= arr.length) return;
+const test = new Image();
+const url = arr[i++];
+test.onload = () => { el.src = url; };
+test.onerror = next;
+test.src = url;
+})();
+}
+
+loadImage("heroImg", heroImgs);
+loadImage("sideImg", sideImgs);
+loadImage("g1", heroImgs);
+loadImage("g2", sideImgs);
+loadImage("g3", g3Imgs);
+
+// Modal privacidade
+const modal = document.getElementById("privacyModal");
+const backdrop = document.getElementById("modalBackdrop");
+const openBtn = document.getElementById("privacyOpen");
+const closeBtn = document.getElementById("closeModal");
+
+function showModal(){
+if (!modal || !backdrop) return;
+backdrop.style.display = "block";
+modal.style.display = "block";
+}
+
+function hideModal(){
+if (!modal || !backdrop) return;
+backdrop.style.display = "none";
+modal.style.display = "none";
+}
+
+if (openBtn) openBtn.addEventListener("click", showModal);
+if (closeBtn) closeBtn.addEventListener("click", hideModal);
+if (backdrop) backdrop.addEventListener("click", hideModal);
+
+document.addEventListener("keydown", (e) => {
+if (e.key === "Escape") hideModal();
+});
+</script>
 </body>
 </html>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
