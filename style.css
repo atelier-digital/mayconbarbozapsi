@@ -118,6 +118,30 @@ border:1px solid rgba(0,0,0,0.06);
 .instagram-btn:hover{
 text-decoration:underline;
 }
+/* BOTÃO WHATSAPP / CTA PRINCIPAL */
+.hero-cta,
+.section-cta{
+margin-top:16px;
+text-align:center;
+}
+
+.cta-btn{
+display:inline-block;
+padding:10px 20px;
+border-radius:999px;
+background:var(--primary);
+color:#fff;
+font-weight:600;
+font-size:.95rem;
+text-decoration:none;
+border:none;
+box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+
+.cta-btn:hover{
+filter:brightness(1.05);
+}
+
 
 /* MODALIDADES (accordion) ------------------------------ */
 .services{
