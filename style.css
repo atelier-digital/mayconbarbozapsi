@@ -47,26 +47,29 @@ p{margin:0 0 0.8em;}
 /* NAV / ABAS SUPERIORES -------------------------------- */
 .top-nav{
   display:flex;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;          /* não quebrar linha */
   justify-content:center;
-  gap:10px;
+  gap:8px;                   /* um pouco menos espaço entre eles */
   margin-bottom:18px;
+  overflow-x:auto;           /* se a tela for muito estreita, permite rolar pro lado */
 }
 
 .top-nav a{
-  padding:7px 14px;
+  padding:6px 10px;          /* menor pra caber tudo numa linha */
   border-radius:999px;
   background:#fdf9f3;
-  color:var(--muted);
+  color:var(--primary);      /* MESMO AZUL DO BOTÃO */
   text-decoration:none;
-  font-size:0.9rem;
+  font-size:0.85rem;         /* pouquinho menor */
   border:1px solid rgba(0,0,0,0.06);
+  white-space:nowrap;        /* cada aba toda em uma linha só */
   transition:0.25s;
 }
 
 .top-nav a:hover{
-  color:var(--primary);
-  border-color:rgba(0,0,0,0.18);
+  color:#fff;
+  background:var(--primary);
+  border-color:var(--primary);
 }
 
 /* HERO -------------------------------------------------- */
