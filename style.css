@@ -14,7 +14,7 @@ html{font-size:19px}
 
 body{
 margin:0;
-background:var(--bg);
+background:var(--bg); 
 color:var(--muted);
 font-family:var(--serif);
 line-height:1.62;
