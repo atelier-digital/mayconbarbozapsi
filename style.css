@@ -339,4 +339,18 @@ object-fit:contain;
 object-position:center center;
 }
 }
-</style>
+</style>.hero-cta{
+text-align:center;
+margin-top:18px;
+}
+
+.cta-btn{
+display:inline-block;
+background:var(--primary);
+color:#fff;
+padding:10px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+font-size:.95rem;
+}
