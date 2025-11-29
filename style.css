@@ -50,26 +50,25 @@ p{margin:0 0 0.8em;}
   padding-bottom:6px;
 }
 
+/* 🔷 BOTÕES DE MENU SUAVES */
 .top-nav a{
+  background:rgba(31,91,122,0.10); /* azul MUITO leve */
   color:var(--primary);
-  text-decoration:none;
+  padding:8px 14px;
+  border-radius:40px;
   font-weight:600;
-  font-size:.92rem;
-  padding:6px 12px;
-  border-radius:8px;
-  transition:0.2s;
+  font-size:.93rem;
+  text-decoration:none;
+  transition:.25s ease;
+  border:1px solid rgba(31,91,122,0.18);
 }
 
-/* hover */
+/* hover – leve, elegante */
 .top-nav a:hover{
-  background:#e3f0f7;
+  background:rgba(31,91,122,0.16);
+  transform:translateY(-2px);
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
-
-/* desktop = tudo em 1 linha */
-@media (min-width:900px){
-  .top-nav{
-    flex-wrap:nowrap;
-  }
 }
 
 /* HERO -------------------------------------------------- */
