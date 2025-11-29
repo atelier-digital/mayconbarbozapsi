@@ -26,11 +26,7 @@ body{
 
 *{box-sizing:border-box}
 p{margin:0 0 0.8em;}
-
-.muted{
-  color:var(--muted);
-  font-size:0.98rem;
-}
+.muted{color:var(--muted);font-size:0.98rem;}
 
 .wrap{
   max-width:var(--maxw);
@@ -49,15 +45,15 @@ p{margin:0 0 0.8em;}
 .top-nav{
   display:flex;
   gap:10px;
-  flex-wrap:wrap;        /* no celular pode quebrar */
+  flex-wrap:wrap;        /* no mobile quebra bonito */
   justify-content:center;
   margin-bottom:22px;
   padding-bottom:6px;
 }
 
-/* 🔷 BOTÕES DE MENU SUAVES */
+/* Aparência dos botões do menu */
 .top-nav a{
-  background:rgba(31,91,122,0.10); /* azul MUITO leve */
+  background:rgba(31,91,122,0.10);
   color:var(--primary);
   padding:8px 14px;
   border-radius:40px;
@@ -68,17 +64,23 @@ p{margin:0 0 0.8em;}
   border:1px solid rgba(31,91,122,0.18);
 }
 
-/* hover – leve, elegante */
 .top-nav a:hover{
   background:rgba(31,91,122,0.16);
   transform:translateY(-2px);
   box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
 
-/* no desktop: tudo em 1 linha */
+/* 🌍 DESKTOP — MENU PERFEITAMENTE CENTRALIZADO */
 @media (min-width:900px){
   .top-nav{
-    flex-wrap:nowrap;
+    display:grid;
+    grid-template-columns:repeat(6, 1fr); /* 6 botões = 6 colunas iguais */
+    gap:16px;
+    justify-items:center;
+  }
+  .top-nav a{
+    width:100%;
+    text-align:center;
   }
 }
 
@@ -97,35 +99,18 @@ p{margin:0 0 0.8em;}
   text-align:center;
 }
 
-.lead{
-  margin-top:10px;
-  font-size:1.02rem;
-  text-align:center;
-}
-
-.meta{
-  margin-top:12px;
-  font-size:0.98rem;
-  text-align:center;
-}
+.lead{margin-top:10px;font-size:1.02rem;text-align:center;}
+.meta{margin-top:12px;font-size:0.98rem;text-align:center;}
 
 .hero-photo{
-  width:100%;
-  height:60vh;
-  max-height:640px;
-  border-radius:12px;
-  object-fit:cover;
+  width:100%;height:60vh;max-height:640px;
+  border-radius:12px;object-fit:cover;
   object-position:center top;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* BOTÕES WHATSAPP / CTA */
-.hero-cta,
-.section-cta{
-  margin-top:16px;
-  text-align:center;
-}
-
+/* BOTÕES */
+.hero-cta,.section-cta{text-align:center;margin-top:16px;}
 .cta-btn{
   display:inline-block;
   padding:10px 20px;
@@ -135,231 +120,89 @@ p{margin:0 0 0.8em;}
   font-weight:600;
   font-size:.95rem;
   text-decoration:none;
-  border:none;
   box-shadow:0 6px 18px rgba(0,0,0,.18);
 }
-.cta-btn:hover{
-  filter:brightness(1.05);
-}
+.cta-btn:hover{filter:brightness(1.05);}
 
 /* SEÇÕES ------------------------------------------------ */
-.section{
-  margin-top:22px;
-}
-h2{
-  color:var(--primary);
-  margin:0 0 8px;
-  font-size:1.12rem;
-}
-.two-col{
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
-}
+.section{margin-top:22px}
+h2{color:var(--primary);margin:0 0 8px;font-size:1.12rem}
 
+.two-col{display:flex;gap:20px;align-items:flex-start}
 .side-photo{
-  width:320px;
-  height:260px;
-  object-fit:cover;
-  object-position:center top;
-  border-radius:10px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.06);
+  width:320px;height:260px;object-fit:cover;
+  border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.06)
 }
 
-/* INSTAGRAM */
+/* Instagram */
 .instagram-btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 14px;
-  border-radius:8px;
-  background:#fdf9f3;
-  color:var(--primary);
-  text-decoration:none;
-  font-size:0.95rem;
-  border:1px solid rgba(0,0,0,0.06);
+  display:inline-block;margin-top:10px;padding:8px 14px;
+  border-radius:8px;background:#fdf9f3;color:var(--primary);
+  border:1px solid rgba(0,0,0,0.06);font-size:.95rem;text-decoration:none;
 }
-.instagram-btn:hover{
-  text-decoration:underline;
-}
+.instagram-btn:hover{text-decoration:underline}
 
-/* MODALIDADES */
-.services{
-  display:grid;
-  gap:12px;
-  margin-top:10px;
-}
+/* Modalidades */
+.services{display:grid;gap:12px;margin-top:10px}
 details.service{
-  background:#fdf9f3;
-  border-radius:12px;
-  padding:10px 14px;
+  background:#fdf9f3;border-radius:12px;padding:10px 14px;
   box-shadow:0 4px 10px rgba(0,0,0,0.04);
 }
-details.service summary{
-  list-style:none;
-  cursor:pointer;
-  font-weight:700;
-  color:var(--primary);
-}
-details.service summary::-webkit-details-marker{
-  display:none;
-}
-details.service p{
-  margin:8px 0 4px;
-  font-size:0.98rem;
-}
+details.service summary{cursor:pointer;font-weight:700;color:var(--primary);}
+details.service summary::-webkit-details-marker{display:none}
 
-/* GALERIA */
+/* Galeria */
 .gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:14px;
+  gap:14px;margin-top:14px;
 }
 .gimg{
-  width:100%;
-  height:250px;
-  border-radius:12px;
-  overflow:hidden;
-  background:#f0eeeb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width:100%;height:250px;border-radius:12px;overflow:hidden;
+  background:#f0eeeb;display:flex;align-items:center;justify-content:center;
 }
-.gimg img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 18%;
-}
+.gimg img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
 
-/* E-BOOK */
-.ebook-actions{
-  margin-top:10px;
-}
-.ebook-link-btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:8px;
-  background:var(--primary);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  font-size:0.95rem;
-}
-.ebook-note{
-  margin-top:6px;
-  font-size:0.9rem;
-  color:#666;
-}
+/* E-book */
+.ebook-actions{margin-top:10px}
+.ebook-note{margin-top:6px;font-size:0.9rem;color:#666}
 
-/* ANALISTA REATIVO */
+/* Analista reativo */
 .ar-box{
-  background:#fdf9f3;
-  border-radius:12px;
-  padding:18px;
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
-  border:1px solid rgba(0,0,0,0.06);
-  margin-top:22px;
+  background:#fdf9f3;border-radius:12px;padding:18px;
+  display:flex;gap:18px;align-items:flex-start;border:1px solid rgba(0,0,0,0.06)
 }
-.ar-img{
-  width:220px;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(0,0,0,.1);
-  flex-shrink:0;
-}
+.ar-img{width:220px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.1)}
 
-/* RODAPÉ */
-footer{
-  margin-top:28px;
-  text-align:center;
-  font-size:0.95rem;
-  color:var(--muted);
-}
+/* Rodapé */
+footer{text-align:center;margin-top:28px;font-size:.95rem}
 
-/* MOBILE RESPONSIVO */
+/* MOBILE */
 @media(max-width:768px){
-  .hero{
-    grid-template-columns:1fr;
-  }
-  .hero-photo{
-    height:40vh;
-  }
-  .two-col{
-    flex-direction:column;
-  }
-  .side-photo{
-    width:100%;
-    height:auto;
-    max-height:320px;
-    object-fit:contain;
-  }
-  .gimg img{
-    object-fit:contain;
-    object-position:center center;
-  }
-  .ar-box{
-    flex-direction:column;
-  }
-  .ar-img{
-    width:100%;
-    max-width:260px;
-    margin:auto;
-  }
+  .hero{grid-template-columns:1fr;}
+  .hero-photo{height:40vh;}
+  .two-col{flex-direction:column;}
+  .side-photo{width:100%;height:auto;object-fit:contain}
+  .gallery{grid-template-columns:repeat(2,1fr);}
+  .gimg img{object-fit:contain;object-position:center}
+  .ar-box{flex-direction:column}
+  .ar-img{width:100%;max-width:260px;margin:auto}
 }
 
-/* MODAL DE PRIVACIDADE --------------------------------- */
-.modal-backdrop{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.45);
-  display:none;          /* começa escondido */
-  z-index:999;
-}
-
+/* 🔒 Modal de privacidade */
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:999}
 .modal{
-  display:none;          /* começa escondido */
-  position:fixed;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:min(920px,94%);
-  background:var(--card);
-  border-radius:10px;
-  padding:20px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.25);
-  z-index:1000;
-  max-height:80vh;
-  overflow:auto;
+  display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(920px,94%);background:#fff;border-radius:10px;padding:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;
 }
 
-/* BALÃO DA YARA (CHAT) ------------------------------- */
+/* YARA */
 .iara-hint{
-  position:fixed;
-  right:16px;
-  bottom:95px;
-  background:var(--primary);
-  color:#fff;
-  font-size:0.82rem;
-  padding:6px 10px;
-  border-radius:20px;
-  box-shadow:0 4px 10px rgba(0,0,0,.25);
-  display:none;        /* começa escondido */
-  z-index:99999;
+  display:none;
+  position:fixed;right:16px;bottom:95px;
+  background:var(--primary);color:#fff;font-size:.82rem;
+  padding:6px 10px;border-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.25)
 }
-
-/* Exibe só no celular */
-@media (max-width:768px){
-  .iara-hint{
-    display:block;
-  }
-}/* CENTRALIZAR MENU NO DESKTOP */
-@media (min-width:900px){
-  .top-nav{
-    flex-wrap:nowrap;     /* tudo em 1 linha */
-    justify-content:center; /* CENTRALIZA no desktop */
-    gap:16px;             /* espaçamento mais proporcional */
-  }
-}
+@media(max-width:768px){.iara-hint{display:block}}
 
