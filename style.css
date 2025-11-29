@@ -217,5 +217,29 @@ footer{
   z-index:1000;
   max-height:80vh;
   overflow:auto;
+}/* MODAL DE PRIVACIDADE --------------------------------- */
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  display:none;          /* começa escondido */
+  z-index:999;
 }
+
+.modal{
+  display:none;          /* começa escondido */
+  position:fixed;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:min(920px,94%);
+  background:var(--card);
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.25);
+  z-index:1000;
+  max-height:80vh;
+  overflow:auto;
+}
+
 
