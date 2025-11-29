@@ -354,4 +354,12 @@ footer{
   .iara-hint{
     display:block;
   }
+}/* CENTRALIZAR MENU NO DESKTOP */
+@media (min-width:900px){
+  .top-nav{
+    flex-wrap:nowrap;     /* tudo em 1 linha */
+    justify-content:center; /* CENTRALIZA no desktop */
+    gap:16px;             /* espaçamento mais proporcional */
+  }
 }
+
