@@ -47,11 +47,11 @@ p{margin:0 0 0.8em;}
 /* NAV / ABAS SUPERIORES -------------------------------- */
 .top-nav{
   display:flex;
-  flex-wrap:nowrap;          /* não quebrar linha */
+  flex-wrap:wrap;        /* no padrão, pode quebrar linha */
   justify-content:center;
-  gap:8px;                   /* um pouco menos espaço entre eles */
+  gap:8px;
   margin-bottom:18px;
-  overflow-x:auto;           /* se a tela for muito estreita, permite rolar pro lado */
+  overflow-x:visible;    /* sem barra lateral */
 }
 
 .top-nav a{
