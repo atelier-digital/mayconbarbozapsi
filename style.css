@@ -74,7 +74,7 @@ p{margin:0 0 0.8em;}
 @media (min-width:900px){
   .top-nav{
     display:grid;
-    grid-template-columns:repeat(6, 1fr); /* 6 botões = 6 colunas iguais */
+    grid-template-columns:repeat(6, 1fr); /* 6 botões = 6 colunas */
     gap:16px;
     justify-items:center;
   }
@@ -163,9 +163,64 @@ details.service summary::-webkit-details-marker{display:none}
 }
 .gimg img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
 
-/* E-book */
+/* BOTÃO PADRÃO PARA E-BOOKS (formação + loja) */
+.ebook-link-btn{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.9rem;
+  box-shadow:0 5px 14px rgba(0,0,0,0.15);
+  margin-top:8px;
+}
+.ebook-link-btn:hover{
+  filter:brightness(1.05);
+}
+
+/* E-book da formação */
 .ebook-actions{margin-top:10px}
 .ebook-note{margin-top:6px;font-size:0.9rem;color:#666}
+
+/* ➕ LOJA DE E-BOOKS (GRID) ----------------------------- */
+.ebook-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:16px;
+}
+
+.ebook-card{
+  background:#fdf9f3;
+  border-radius:12px;
+  padding:14px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.04);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.ebook-cover{
+  width:100%;
+  max-width:180px;   /* capa discreta */
+  height:auto;
+  border-radius:10px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.12);
+  margin-bottom:10px;
+}
+
+.ebook-card h3{
+  margin:8px 0 4px;
+  font-size:0.96rem;
+  color:var(--primary);
+}
+
+.ebook-card .muted{
+  font-size:0.9rem;
+}
 
 /* Analista reativo */
 .ar-box{
@@ -187,12 +242,22 @@ footer{text-align:center;margin-top:28px;font-size:.95rem}
   .gimg img{object-fit:contain;object-position:center}
   .ar-box{flex-direction:column}
   .ar-img{width:100%;max-width:260px;margin:auto}
+
+  /* Loja de e-books em 2 colunas no celular */
+  .ebook-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
 /* 🔒 Modal de privacidade */
-.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:999}
+.modal-backdrop{
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.45);z-index:999
+}
 .modal{
-  display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+  display:none;
+  position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
   width:min(920px,94%);background:#fff;border-radius:10px;padding:20px;
   box-shadow:0 20px 60px rgba(0,0,0,0.25);z-index:1000;
 }
@@ -204,5 +269,8 @@ footer{text-align:center;margin-top:28px;font-size:.95rem}
   background:var(--primary);color:#fff;font-size:.82rem;
   padding:6px 10px;border-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.25)
 }
-@media(max-width:768px){.iara-hint{display:block}}
+@media(max-width:768px){
+  .iara-hint{display:block}
+}
+
 
