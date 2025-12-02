@@ -11,7 +11,7 @@
 /* 📍 Fundo com degradê azul nas laterais */
 body{
   margin:0;
-  background:linear-gradient(
+  background:linear-gradient( 
     90deg,
     #dbe9f1 0%,
     #f6f2ec 20%,
