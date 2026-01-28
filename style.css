@@ -1,17 +1,17 @@
 :root{
   --bg:#f6f2ec;
   --card:#ffffff;
-  --primary:#1F5B7A; /* azul principal */ 
+  --primary:#1F5B7A;
   --muted:#3f3b38;
-  --radius:12px;
+  --radius:16px;
   --maxw:1120px;
   --serif:"Georgia","Times New Roman",serif;
 }
 
-/* 📍 Fundo com degradê azul nas laterais */
+/* FUNDO */
 body{
   margin:0;
-  background:linear-gradient( 
+  background:linear-gradient(
     90deg,
     #dbe9f1 0%,
     #f6f2ec 20%,
@@ -21,40 +21,35 @@ body{
   color:var(--muted);
   font-family:var(--serif);
   line-height:1.62;
-  -webkit-font-smoothing:antialiased;
 }
 
 *{box-sizing:border-box}
-p{margin:0 0 0.8em;}
-.muted{
-  color:var(--muted);
-  font-size:0.98rem;
-}
+p{margin:0 0 0.8em}
 
+/* CONTAINER */
 .wrap{
   max-width:var(--maxw);
   margin:20px auto;
   padding:20px;
 }
 
+/* CARD – visual mais site, menos blog */
 .card{
-  background:linear-gradient(180deg,#f9f5ee 0%,#eaf2f7 100%);
-  border-radius:var(--radius);
-  padding:26px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.07);
+  background:#ffffff;
+  border-radius:16px;
+  padding:32px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
 }
 
-/* 🔹 MENU SUPERIOR */
+/* MENU */
 .top-nav{
   display:flex;
   gap:10px;
-  flex-wrap:wrap;        /* no mobile quebra bonito */
+  flex-wrap:wrap;
   justify-content:center;
   margin-bottom:22px;
-  padding-bottom:6px;
 }
 
-/* Aparência dos botões do menu */
 .top-nav a{
   background:rgba(31,91,122,0.10);
   color:var(--primary);
@@ -63,38 +58,34 @@ p{margin:0 0 0.8em;}
   font-weight:600;
   font-size:.93rem;
   text-decoration:none;
-  transition:.25s ease;
   border:1px solid rgba(31,91,122,0.18);
+  transition:.25s;
 }
 
 .top-nav a:hover{
   background:rgba(31,91,122,0.16);
   transform:translateY(-2px);
-  box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
 
-/* 🌍 DESKTOP — MENU EM UMA LINHA (7 ITENS) */
-@media (min-width:900px){
+/* MENU DESKTOP */
+@media(min-width:900px){
   .top-nav{
     display:grid;
-    grid-auto-flow:column;     /* coloca todos lado a lado */
-    grid-auto-columns:1fr;     /* cada item ocupa 1 fração */
+    grid-auto-flow:column;
+    grid-auto-columns:1fr;
     gap:16px;
-    justify-content:center;
-    align-items:center;
   }
   .top-nav a{
-    width:100%;
+    white-space:nowrap;
     text-align:center;
-    white-space:nowrap;        /* evita quebrar o texto do botão */
   }
 }
 
-/* HERO -------------------------------------------------- */
+/* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:22px;
+  gap:24px;
   align-items:center;
 }
 
@@ -102,39 +93,22 @@ p{margin:0 0 0.8em;}
   margin:0;
   font-size:2.1rem;
   color:var(--primary);
-  text-align:center;
-}
-
-.lead{
-  margin-top:10px;
-  font-size:1.02rem;
-  text-align:center;
-}
-.meta{
-  margin-top:12px;
-  font-size:0.98rem;
-  text-align:center;
 }
 
 .hero-photo{
   width:100%;
   height:60vh;
   max-height:640px;
-  border-radius:12px;
+  border-radius:14px;
   object-fit:cover;
   object-position:center top;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* BOTÕES ------------------------------------------------ */
-.hero-cta,
-.section-cta{
-  text-align:center;
-  margin-top:16px;
-}
+/* BOTÕES */
 .cta-btn{
   display:inline-block;
-  padding:10px 20px;
+  padding:10px 22px;
   border-radius:999px;
   background:var(--primary);
   color:#fff;
@@ -143,96 +117,70 @@ p{margin:0 0 0.8em;}
   text-decoration:none;
   box-shadow:0 6px 18px rgba(0,0,0,.18);
 }
-.cta-btn:hover{
-  filter:brightness(1.05);
-}
 
-/* SEÇÕES ------------------------------------------------ */
-.section{
-  margin-top:22px;
-}
-h2{
-  color:var(--primary);
-  margin:0 0 8px;
-  font-size:1.12rem;
-}
+/* SEÇÕES */
+.section{margin-top:26px}
+h2{color:var(--primary);margin-bottom:8px}
 
+/* DUAS COLUNAS */
 .two-col{
   display:flex;
-  gap:20px;
+  gap:24px;
   align-items:flex-start;
 }
+
 .side-photo{
   width:320px;
-  height:260px;
+  height:auto;
+  max-height:360px;
   object-fit:cover;
-  object-position:center top;
-  border-radius:10px;
+  border-radius:12px;
   box-shadow:0 8px 18px rgba(0,0,0,0.06);
 }
 
-/* Instagram --------------------------------------------- */
-.instagram-btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 14px;
-  border-radius:8px;
-  background:#fdf9f3;
-  color:var(--primary);
-  border:1px solid rgba(0,0,0,0.06);
-  font-size:.95rem;
-  text-decoration:none;
-}
-.instagram-btn:hover{
-  text-decoration:underline;
-}
-
-/* Modalidades ------------------------------------------- */
-.services{
-  display:grid;
-  gap:12px;
-  margin-top:10px;
-}
-details.service{
-  background:#fdf9f3;
-  border-radius:12px;
-  padding:10px 14px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.04);
-}
-details.service summary{
-  cursor:pointer;
-  font-weight:700;
-  color:var(--primary);
-}
-details.service summary::-webkit-details-marker{
-  display:none;
-}
-
-/* Galeria ----------------------------------------------- */
+/* GALERIA */
 .gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:14px;
-  margin-top:14px;
 }
+
 .gimg{
-  width:100%;
   height:250px;
   border-radius:12px;
   overflow:hidden;
-  background:#f0eeeb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
+
 .gimg img{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 18%;
 }
 
-/* BOTÃO PADRÃO PARA E-BOOKS (formação + loja) ---------- */
+/* LOJA */
+.ebook-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.ebook-card{
+  background:#fdf9f3;
+  border-radius:14px;
+  padding:16px;
+  text-align:center;
+}
+
+.ebook-cover{
+  max-width:180px;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* BOTÃO EBOOK */
 .ebook-link-btn{
   display:inline-block;
   padding:8px 16px;
@@ -241,178 +189,64 @@ details.service summary::-webkit-details-marker{
   color:#fff;
   text-decoration:none;
   font-weight:600;
-  font-size:0.9rem;
-  box-shadow:0 5px 14px rgba(0,0,0,0.15);
-  margin-top:8px;
-}
-.ebook-link-btn:hover{
-  filter:brightness(1.05);
+  font-size:.9rem;
 }
 
-/* E-book da formação ------------------------------------ */
-.ebook-actions{
-  margin-top:10px;
-}
-.ebook-note{
-  margin-top:6px;
-  font-size:0.9rem;
-  color:#666;
-}
-
-/* LOJA DE E-BOOKS (GRID) ------------------------------- */
-.ebook-grid{
+/* PODCAST – corrigido */
+.podcast-box{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-  margin-top:16px;
-}
-
-.ebook-card{
-  background:#fdf9f3;
-  border-radius:12px;
-  padding:14px;
-  box-shadow:0 6px 14px rgba(0,0,0,0.04);
-  display:flex;
-  flex-direction:column;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
   align-items:center;
-  text-align:center;
 }
 
-.ebook-cover{
-  width:100%;
-  max-width:180px;   /* capa discreta */
-  height:auto;
-  border-radius:10px;
-  box-shadow:0 6px 14px rgba(0,0,0,0.12);
-  margin-bottom:10px;
-}
-
-.ebook-card h3{
-  margin:8px 0 4px;
-  font-size:0.96rem;
-  color:var(--primary);
-}
-
-.ebook-card .muted{
-  font-size:0.9rem;
-}
-
-/* PODCAST ------------------------------------------------ */
 .podcast-cover{
-  width:320px;
-  max-width:100%;
-  border-radius:12px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.06);
-  object-fit:cover;
+  width:100%;
+  max-width:420px;
+  height:auto;
+  object-fit:contain;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
 
-/* Analista reativo -------------------------------------- */
+/* ANALISTA REATIVO – NÃO ESTICA */
 .ar-box{
   background:#fdf9f3;
-  border-radius:12px;
-  padding:18px;
+  border-radius:14px;
+  padding:20px;
   display:flex;
-  gap:18px;
+  gap:20px;
   align-items:flex-start;
-  border:1px solid rgba(0,0,0,0.06);
 }
+
 .ar-img{
   width:220px;
-  border-radius:10px;
+  height:auto;
+  max-height:320px;
+  object-fit:contain;
+  border-radius:12px;
   box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
 
-/* Rodapé ------------------------------------------------ */
+/* RODAPÉ */
 footer{
   text-align:center;
-  margin-top:28px;
+  margin-top:32px;
   font-size:.95rem;
 }
 
-/* MOBILE ------------------------------------------------ */
+/* MOBILE */
 @media(max-width:768px){
-  .hero{
-    grid-template-columns:1fr;
-  }
-  .hero-photo{
-    height:40vh;
-  }
-  .two-col{
-    flex-direction:column;
-  }
-  .side-photo{
-    width:100%;
-    height:auto;
-    max-height:320px;
-    object-fit:contain;
-  }
-  .gallery{
-    grid-template-columns:repeat(2,1fr);
-  }
-  .gimg img{
-    object-fit:contain;
-    object-position:center;
-  }
-  .ar-box{
-    flex-direction:column;
-  }
-  .ar-img{
-    width:100%;
-    max-width:260px;
-    margin:auto;
-  }
+  .hero{grid-template-columns:1fr}
+  .hero-photo{height:40vh}
 
-  /* Loja de e-books em 2 colunas no celular */
-  .ebook-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .two-col{flex-direction:column}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .ebook-grid{grid-template-columns:repeat(2,1fr)}
 
-  .podcast-cover{
-    width:100%;
-    height:auto;
-    max-height:320px;
-    object-fit:contain;
-  }
-}
+  .podcast-box{grid-template-columns:1fr}
+  .podcast-cover{margin:auto}
 
-/* 🔒 Modal de privacidade ------------------------------- */
-.modal-backdrop{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.45);
-  z-index:999;
-}
-.modal{
-  display:none;
-  position:fixed;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:min(920px,94%);
-  background:#fff;
-  border-radius:10px;
-  padding:20px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.25);
-  z-index:1000;
-}
-
-/* YARA -------------------------------------------------- */
-.iara-hint{
-  display:none;
-  position:fixed;
-  right:16px;
-  bottom:95px;
-  background:var(--primary);
-  color:#fff;
-  font-size:.82rem;
-  padding:6px 10px;
-  border-radius:20px;
-  box-shadow:0 4px 10px rgba(0,0,0,.25);
-  z-index:99999;
-}
-@media(max-width:768px){
-  .iara-hint{
-    display:block;
-  }
+  .ar-box{flex-direction:column}
+  .ar-img{margin:auto}
 }
