@@ -249,6 +249,14 @@ details.service summary::-webkit-details-marker{
   filter:brightness(1.05);
 }
 
+}
+
+/* Faça sua Matrícula ------------------------------------ */
+.ebook-actions{
+  margin-top:10px;
+}
+
+
 /* E-book da formação ------------------------------------ */
 .ebook-actions{
   margin-top:10px;
